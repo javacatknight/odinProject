@@ -42,4 +42,33 @@ function game(){
     }
 }
 game();
+/*
+?revert to [] whenever .won't work.
+
+elementName.querySelector("div.className");
+elementName.querySelectorAll(); -> returns a nodelist, use Array.from(nodelist)
+
+//?element creation
+const tagName = document.createElement('tagName', [options]);
+variable tagnName is reference
+
+//?Modification: .setAttribute(type, ['value'])
+tagName.setAttribute('style', 'color: blue; background: white'; font: blue);    
+tagName.setAttribute('id', 'theDiv');
+tagName.setAttribute('class', 'lmao'); //*tagName.classList.add/remove/toggle('thisClass');
+tagName.getAttribute('id');
+tagName.removeAttribute('id');
+//*text content
+tagName.textContent = "camelCase = BASED"; //* note that a text node is created and inserted within the element; makes sense, text isn't a property ex. div cant have text
+tagName.innerHTML "<tag></tag>";
+
+//?element insertion
+parentNode.appendChild(childNode) appends childNode as the last child of parentNode
+parentNode.insertBefore(newNode, referenceNode) inserts newNode into parentNode before referenceNode
+
+//?removal
+parentNode.removeChild(child) -> returns reference to child
+*/
+
+
 
