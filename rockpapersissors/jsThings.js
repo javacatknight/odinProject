@@ -1,4 +1,6 @@
 var array = ["rock", "paper", "sissors"];
+var yourpoints = 0;
+var theirpoints = 0;
 
 function computerPlay (){
     var x = parseInt((3*Math.random()));
@@ -18,32 +20,40 @@ function playRound(playerSelection, computerSelection){
     }
     difference = yours - computer;
     var returnable = "";
-    //1, -2 = win 1 and -2 are losing
     if (difference == 0){
         returnable = "Tie"
     }else if (difference == 1 || difference == -2){
         returnable = "You win! " + array[yours] + "beats" + array[computer];
+        yourpoints++;
     } else {
         returnable = "You lose! " + array[computer] + "beats" + array[yours];
+        theirpoints++;
     }
     return returnable;
 }
-function init (){
+
+//created an init function but not in scope -> might look at closures
 const yours = document.querySelector("div#results");
 const roundResults = document.createElement("div");
 const runningScore = document.createElement("div");
 yours.appendChild(roundResults);
 yours.appendChild(runningScore);
-}
-init();
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => button.addEventListener("click", callback));
 
-function callback(e){
+init();
+
+function callback(e){ //action handler
+    console.log("flag");
+    roundResults.style = "white-space: pre";
+    roundResults.textContent = ("You chose " + e.target.id + "\n" +(playRound(e.target.id, computerPlay())) + "\n\n\n");
+
+    runningScore.textContent = (yourpoints + ":" + theirpoints);
+    if (yourpoints == 5 || theirpoints == 5){
+        runningScore.textContent = "Have a winner!";
+    }
     
-    yours.style = "white-space: pre";
-    yours.textContent = ("You chose " + e.target.id + "\n" +(playRound(e.target.id, computerPlay())));
 }
 
 
