@@ -1,0 +1,75 @@
+//HTML REFRESHER
+<tag attribute = "value"></tag>
+
+//CSS REFRESHER
+selector {
+    property: value;
+}
+
+//Examples:
+h1 {
+    font-size: blue;
+}
+
+1) html tag
+div {
+}
+
+2) class, (assigned to html element)
+.name-of-class {
+}
+//HTML: <h1 class = "name-of-class"></h1>
+
+3) id, single element
+#id {
+}
+
+3b) attribute selector
+tag[custom-attribute]
+//HTML: <tag class = "" custom-attribute = ""]
+
+
+//COMBINING/CHAINING SELECTORS
+4a) descedent of
+div p {
+    color: blue; 
+} //for paragraphs that are descedent/inside divs
+
+4b) belongs to both
+//Combine selectors by following two selectors WITHOUT space
+
+div.name-of-class{
+    color:blue;
+}
+//works on only divider elements with that class
+
+
+4c) apply a rule to multiple classes, via COMMA ie 
+div, html {
+    selector: value;
+}
+
+5) In CSS, the latest styling rule is applied
+
+6) HEIARCHY: inline, id, class, type
+
+7) Inheritance, class style wil override inheritance
+<body>
+    <h1></h1>
+</body>
+//h1 will has same properties as body unless a class is applied
+
+9) <link rel = "stylesheet" href = "styles.css">
+
+10) Internal CSS, within html use
+<h1>
+    <style>
+        h1.blue-class{
+            color: blue;
+        }
+    </style>
+</h1>
+11) inline
+<h1>
+    <h2 style = "color: blue; font: arial;"></h2>
+</h1>
