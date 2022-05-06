@@ -1,2 +1,3 @@
-An assignment from the Odin Project, an open source course on web development basics, I practiced introductory html and javascript.
-https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
+The Odin Project is a series of open source courses on web development.
+
+I practiced introductory html and javascript and have attached my attempt at the assignment:https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
