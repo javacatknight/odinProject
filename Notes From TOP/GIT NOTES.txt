@@ -6,7 +6,7 @@
 4. git commit -m "message about commit"
 5. git status
 6. git log
-7. git push origin main //main branch from origin, which is what your remote is called i think
+7. git push origin main //main branch from origin, which is what your remote is called by default
 
 1. touch .git_ignore
     folder_name/    => everything in this folder is ignored
